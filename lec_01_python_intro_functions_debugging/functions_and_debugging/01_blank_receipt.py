@@ -1,5 +1,5 @@
 def print_dashes():
-    print('---------------------')
+    print('------------------------------')
 
 
 def print_head():
@@ -8,13 +8,13 @@ def print_head():
 
 
 def print_body():
-    print('Charged to___________')
-    print('Received by__________')
+    print('Charged to____________________')
+    print('Received by___________________')
 
 
 def print_footer():
     print_dashes()
-    print('Softuni')
+    print('© SoftUni')
 
 
 def print_cash():
