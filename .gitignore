@@ -107,4 +107,4 @@ venv.bak/
 .idea/
 .idea/vcs.xml
 __init_.py
-lec_02_lists_and_dictionaries/list/__init__\.py
+__init__\.py
