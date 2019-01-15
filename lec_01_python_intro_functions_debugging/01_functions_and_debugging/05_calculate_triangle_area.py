@@ -2,8 +2,8 @@ def calc_area(a, b):
     return (a * b) / 2
 
 
-a = float(input())
-b = float(input())
+num_1 = float(input())
+num_2 = float(input())
 
-area = calc_area(a, b)
+area = calc_area(num_1, num_2)
 print(f'{area:.12g}')
