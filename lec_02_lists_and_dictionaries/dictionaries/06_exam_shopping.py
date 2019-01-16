@@ -9,15 +9,15 @@ while True:
                 print(f'{key} -> {value}')
         break
     entrance = entrance.split()
-    doing = entrance[0]
+    action = entrance[0]
     key = entrance[1]
     value = int(entrance[2])
-    if doing == 'stock':
+    if action == 'stock':
         if key in my_dict:
             my_dict[key] = my_dict[key] + value
         else:
             my_dict[key] = value
-    if doing == 'buy':
+    elif action == 'buy':
         if key in my_dict and my_dict[key] <= 0:
             print(f'{key} out of stock')
         if key in my_dict:
