@@ -6,11 +6,11 @@ for line in range(0, lines):
     color, types = clothes.split(' -> ')
     if color not in wardrobe:
         wardrobe[color] = {}
-    for type in str(types).split(','):
-        if type in wardrobe[color]:
-            wardrobe[color][type] += 1
+    for this_type in str(types).split(','):
+        if this_type in wardrobe[color]:
+            wardrobe[color][this_type] += 1
         else:
-            wardrobe[color][type] = 1
+            wardrobe[color][this_type] = 1
 
 display_color, display_item, *rest = input().split(' ')
 
