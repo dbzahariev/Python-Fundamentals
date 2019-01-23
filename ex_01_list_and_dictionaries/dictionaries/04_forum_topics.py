@@ -1,21 +1,24 @@
 my_dict = {}
 
+data = input()
+while not data.lower() == 'filter':
+    pair = data.split(' -> ')
+    topic = pair[0]
+    if topic not in forum_dict:
+        forum_dict[topic] = []
 
-def is_contains(search, search_in):
-    if len(search) > len(search_in):
-        return False
-    for index in range(len(search)):
-        if search[index] not in search_in:
-            return False
-    return True
+    for hashtag in pair[1].split(', '):
+        if hashtag not in forum_dict[topic]:
+            forum_dict[topic].append(hashtag)
 
+<<<<<<< HEAD
+    data = input()
 
-def add_prefix(prefix, this_list):
-    for index in range(len(this_list)):
-        this_list[index] = f'{prefix}{this_list[index]}'
-    return this_list
-
-
+target_topic_set = set(input().split(', '))
+for topic, hashtag in forum_dict.items():
+    if target_topic_set.issubset(set(hashtag)):
+        print(f"{topic} | {', '.join(list(map(lambda x: '#' + x, hashtag)))}")
+=======
 while True:
     internal = input()
     if internal.lower() == 'filter':
@@ -34,3 +37,4 @@ while True:
     for value in values:
         if value not in my_dict[key]:
             my_dict[key].append(value)
+>>>>>>> parent of b7388fb... Add new files
