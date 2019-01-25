@@ -1,4 +1,3 @@
-# internal = 'Athens:bus-40,airplane-300,train-150'
 internal = input()
 cites_dict = {}
 while internal.lower() != 'ready'.lower():
