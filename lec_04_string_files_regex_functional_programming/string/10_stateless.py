@@ -1,16 +1,19 @@
-result_list = []
+line_one = input()
 
-while True:
-    data = input()
-    if data.lower() == 'collapse':
-        for item in result_list:
-            if len(item) == 0:
-                print('(void)')
-            else:
-                print(item)
-        break
-    data_2 = input()
-    while not len(data_2) == 0:
-        data = data.replace(data_2, '')
-        data_2 = data_2[1:-1]
-    result_list.append(data)
+while line_one != "collapse":
+    line_two = input()
+
+    while len(line_two) > 0:
+        if line_one.__contains__(line_two):
+            line_one = line_one.replace(line_two, '')
+        else:
+            line_two = line_two[1:]
+            if len(line_two) > 0:
+                line_two = line_two[:-1]
+
+    if len(line_one) > 0:
+        print(line_one.strip())
+    else:
+        print("(void)")
+
+    line_one = input()
