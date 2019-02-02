@@ -1,32 +1,27 @@
-data = input()
-
-while data != "end":
-    borderFirst = data[0:round(len(data) / 2)]
-    borderSecond = ''
-    border = ''
-
-    if len(data) % 2 == 0:
-        borderSecond = data[len(borderFirst):len(data) - len(borderFirst)]
-    else:
-        borderSecond = data[len(borderFirst) + 1:len(data) - len(borderFirst) - 1]
-
-    while True:
-        if borderFirst == borderSecond:
-            border = borderFirst
+def find_border(palin_str):
+    n = len(palin_str) // 2
+    this_k = n
+    this_border = None
+    while this_k >= 0:
+        if this_k == 0:
+            this_border = ""
             break
-        elif borderFirst != borderSecond:
-            borderFirst = borderFirst[len(borderFirst) - 1:]
-            borderSecond = borderSecond.Substring(1, len(borderSecond) - 1)
+        else:
+            this_border = palin_str[0:this_k]
+            if this_border == palin_str[len(palin_str) - this_k:len(palin_str)]:
+                break
+            else:
+                this_k = this_k - 1
+    return this_border, this_k
 
-        if len(borderFirst) == 0 and len(borderSecond) == 0:
-            break
 
-    if len(border) != 0:
-        core = data[:len(data) - len(border)] + data[len(data) - len(border) + len(border.strip())]
-        # core = core.Remove(0, len(border)).Trim()
-        core = core[len(border.strip()):]
-        if core != "":
-            nilapdromes = core + border + core
-            print(nilapdromes)
-
+while True:
     data = input()
+    if data == "end":
+        break
+    else:
+        border, k = find_border(data)
+        core = data[k:len(data) - k]
+        if border != "" and core != "":
+            nilapdrome = core + border + core
+            print(nilapdrome)
