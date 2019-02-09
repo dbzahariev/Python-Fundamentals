@@ -4,9 +4,9 @@ shells = {}
 while True:
     data = input()
     if data == 'Aggregate':
-        for region, data_list in shells.items():
-            giant = math.ceil(sum(data_list) - (sum(data_list) / len(data_list)))
-            shells_str = ", ".join(map(str, data_list))
+        for region, shells_sizes in shells.items():
+            giant = math.ceil(sum(shells_sizes) - (sum(shells_sizes) / len(shells_sizes)))
+            shells_str = ", ".join(map(str, shells_sizes))
             print(f'{region} -> {shells_str} ({giant})')
         break
     else:

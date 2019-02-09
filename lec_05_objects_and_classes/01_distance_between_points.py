@@ -10,7 +10,7 @@ x_2 = int(data_2[0])
 y_2 = int(data_2[1])
 
 
-class Point():
+class Point:
     def __init__(self, X, Y):
         self.x = X
         self.y = Y

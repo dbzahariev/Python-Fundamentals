@@ -40,7 +40,8 @@ def calc_status(statuses):
 
 
 text = input()
-pattern = re.compile(r"(?P<tail>[>]+|[<]+)(?:[<]*)(?P<body>[(]+)(?P<statuses>['|\-|x|X])[>]+")
+# noinspection Annotator,Annotator
+pattern = re.compile(r"(?P<tail>[>]+|[<]+)(?:[<]*)(?P<body>[(]+)(?P<statuses>['|\-xX])[>]+")
 matches = re.finditer(pattern, text)
 count = 0
 for match in matches:

@@ -8,21 +8,16 @@ class Point:
 
 
 class Box:
-    def __init__(self, UpperLeft, UpperRight, BottomLeft, BottomRight, Width, Height):
+    def __init__(self, UpperLeft, UpperRight, BottomLeft, BottomRight):
         self.UpperLeft = UpperLeft
         self.UpperRight = UpperRight
         self.BottomLeft = BottomLeft
         self.BottomRight = BottomRight
-        self.Width = Width
-        self.Height = Height
-        self.Perimeter = self.calculate_perimeter()
-        self.Area = self.calculate_area()
 
-    def calculate_perimeter(self):
-        return 2 * self.Width + 2 * self.Height
-
-    def calculate_area(self):
-        return self.Width * self.Height
+        self.Width = calculate_distance(points[0], points[1])
+        self.Height = calculate_distance(points[0], points[2])
+        self.Perimeter = 2 * self.Width + 2 * self.Height
+        self.Area = self.Width * self.Height
 
     def __str__(self):
         return f'Box: {self.Width:.12g}, {self.Height:.12g}\nPerimeter: {self.Perimeter:.12g}\nArea: {self.Area:.12g}'
@@ -45,9 +40,8 @@ while not data == 'end':
         X_and_Y = list(map(int, point.split(':')))
         one_point = Point(X_and_Y[0], X_and_Y[1])
         points.append(one_point)
-    width = calculate_distance(points[0], points[1])
-    height = calculate_distance(points[0], points[2])
-    one_box = Box(points[0], points[1], points[2], points[3], width, height)
+
+    one_box = Box(points[0], points[1], points[2], points[3])
     boxes.append(one_box)
     data = input()
 

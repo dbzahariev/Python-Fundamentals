@@ -5,7 +5,7 @@ while True:
     count_diamonds = 0
     start_index = text_to_search.find('<')
     end_index = text_to_search.find('>')
-    if start_index == -1 or end_index == -1: # print carats
+    if start_index == -1 or end_index == -1:  # print carats
         if len(found_carats) == 0:
             print('Better luck next time')
         else:

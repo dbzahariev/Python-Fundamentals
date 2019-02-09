@@ -4,7 +4,7 @@ wardrobe = {}
 for line in range(0, lines):
     clothes = input()
     color, types = clothes.split(' -> ')
-    if color not in wardrobe:
+    if color not in wardrobe.keys():
         wardrobe[color] = {}
     for this_type in str(types).split(','):
         if this_type in wardrobe[color]:
