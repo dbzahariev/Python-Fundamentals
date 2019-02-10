@@ -108,3 +108,5 @@ venv.bak/
 .idea/vcs.xml
 __init_.py
 __init__\.py
+
+.vscode
