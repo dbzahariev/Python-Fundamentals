@@ -20,4 +20,3 @@ emp_2 = Employee('Test', 'User', 60000)
 print(Employee.rise_amount)
 print(emp_1.rise_amount)
 print(emp_2.rise_amount)
- 
