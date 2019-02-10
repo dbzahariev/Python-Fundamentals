@@ -80,7 +80,6 @@ while not data == "I'm your Huckleberry":
     data = data.split()
     if data[0] == 'Dog':
         animal = Dog()
-
         animal.set_from_string(data[1:])
         animals.append(animal)
     elif data[0] == 'Cat':
