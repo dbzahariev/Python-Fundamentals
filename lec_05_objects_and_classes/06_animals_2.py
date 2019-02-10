@@ -4,7 +4,6 @@ class Animal:
         self.__age = 0
         self.__sound = ''
         self.__parameters = ''
-        # self.kk = ''
 
     def set_name(self, name: str):
         self.__name = name
@@ -42,7 +41,8 @@ class Dog(Animal):
         self.set_age(animal_age)
         self.set_name(animal_name)
         self.set_parameters(animal_parameter)
-        self.set_sound("I'm a Distinguishedog, and I will now produce a distinguished sound! Bau Bau.")
+        self.set_sound(
+            "I'm a Distinguishedog, and I will now produce a distinguished sound! Bau Bau.")
 
 
 class Cat(Animal):
@@ -96,4 +96,3 @@ while not data == "I'm your Huckleberry":
     data = input()
 # print all animals list comprehension sorting by parameter
 [print(i) for i in sorted(animals, key=lambda k: k.parameter)]
-print(str(animals[0]))
