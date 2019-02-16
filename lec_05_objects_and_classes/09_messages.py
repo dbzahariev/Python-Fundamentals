@@ -61,7 +61,7 @@ while True:
                             del usernames_list[usernames_list.index(user.Username)]
                         break
         if count_message == 0:
-            print(f'No messages')
+            print(f"No messages")
         break
     if data[0].lower() == 'register':
         if len(data) != 2:
