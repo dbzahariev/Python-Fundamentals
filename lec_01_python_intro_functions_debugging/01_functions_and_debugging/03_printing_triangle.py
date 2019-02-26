@@ -1,11 +1,11 @@
 n = int(input())
 
 
-def create_line(k):
-    kk = ''
-    for i in range(1, k + 1):
-        kk += f'{i} '
-    return kk
+def create_line(range_line):
+    line = ''
+    for i in range(1, range_line + 1):
+        line += f'{i} '
+    return line
 
 
 def first_part_print():
